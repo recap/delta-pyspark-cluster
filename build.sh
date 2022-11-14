@@ -1,9 +1,9 @@
 # -- Software Stack Version
 
-SPARK_VERSION="3.3.1"
-HADOOP_VERSION="3"
+SPARK_VERSION="3.2.0"
+HADOOP_VERSION="3.2"
 JUPYTERLAB_VERSION="2.1.5"
-DELTACORE_VERSION="2.1.1"
+DELTACORE_VERSION="2.0.0"
 SCALA_VERSION="2.12"
 
 # -- Building the Images
@@ -27,6 +27,10 @@ docker build \
 docker build \
   -f spark-worker/Dockerfile \
   -t spark-worker .
+
+docker build \
+  -f spark-standalone/Dockerfile \
+  -t spark-standalone .
 
 #docker build \
 #  --build-arg spark_version="${SPARK_VERSION}" \

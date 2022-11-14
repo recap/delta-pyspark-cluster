@@ -8,7 +8,7 @@ ARG shared_workspace=/opt/workspace
 
 RUN mkdir -p ${shared_workspace} && \
     apt update -y && \
-    apt install -y python3 python3-pip procps openjdk-17-jdk && \
+    apt install -y python3 python3-pip procps openjdk-11-jdk && \
     ln -s /usr/bin/python3 /usr/bin/python && \
     rm -rf /var/lib/apt/lists/*
 
